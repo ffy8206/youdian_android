@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:background="@drawable/listview_itembg_before"
+  android:orientation="horizontal" android:gravity="center_vertical">
+  <ImageView android:layout_width="80dip"
+  android:layout_height="80dip" android:id="@+id/listview_item_dishimg"
+  android:layout_marginLeft="20dip" android:scaleType="fitXY"/>
+  <TextView android:layout_width="200dip"
+  android:layout_height="wrap_content" android:id="@+id/text_dishname"
+  android:layout_marginLeft="60dip"
+  android:textSize="20sp"/>
+  <Spinner android:layout_width="180dip"
+  android:layout_height="wrap_content" android:id="@+id/spinner_dishprice"
+  android:background="@drawable/main_spinner_price"
+  android:layout_marginLeft="30dip"/>
+  <ImageButton android:layout_width="wrap_content"
+  android:layout_height="wrap_content" android:id="@+id/imgbtn_makeorder"
+  android:background="#00000000" android:src="@drawable/makeorder_small_before"
+  android:layout_marginLeft="50dip"/>
+</LinearLayout>

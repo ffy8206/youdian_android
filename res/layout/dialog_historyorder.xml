@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@drawable/neworder_bg"
+	android:gravity="center_horizontal">
+	<!-- Define top button line -->
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity="center_horizontal" android:layout_marginTop="35dip">
+		<ImageButton android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/current_order_before"
+			android:id="@+id/imgbtn_currentorder" android:background="#00000000" />
+		<ImageButton android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/history_order_after"
+			android:id="@+id/imgbtn_historyorder" android:background="#00000000" />
+	</LinearLayout>
+
+	<!-- Define filter search title line -->
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:layout_marginTop="10dip" android:layout_marginLeft="20dip"
+		android:layout_marginRight="20dip">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/label_order_status"
+			android:textColor="#000000" android:layout_weight="0.25"
+			android:textSize="16sp" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/label_tableno"
+			android:textColor="#000000" android:layout_weight="0.25"
+			android:textSize="16sp" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/label_customerno"
+			android:textColor="#000000" android:layout_weight="0.5"
+			android:textSize="16sp" />
+	</LinearLayout>
+	<!-- Define filter search line -->
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:layout_marginLeft="20dip" android:layout_marginRight="20dip">
+		<Spinner android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/spinner_orderstatus"
+			android:layout_weight="0.28" />
+		<Spinner android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/spinner_tableno"
+			android:layout_weight="0.28" />
+		<Spinner android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/spinner_customerno"
+			android:layout_weight="0.28" />
+		<ImageButton android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/btn_search"
+			android:layout_weight="0.16" android:background="#00000000" 
+			android:id="@+id/imgbtn_search"/>
+	</LinearLayout>
+	<!-- Define title bar -->
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:background="@drawable/order_titlecolum_bg"
+		android:layout_marginTop="10dip">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/label_tableno"
+			android:textColor="#FFFFFF" android:textSize="16sp"
+			android:layout_weight="0.2" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/label_customerno"
+			android:textColor="#FFFFFF" android:textSize="16sp"
+			android:layout_weight="0.2" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/label_total_ordereddishnum"
+			android:textColor="#FFFFFF" android:textSize="16sp"
+			android:layout_weight="0.2" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/label_total_orderedprice"
+			android:textColor="#FFFFFF" android:textSize="16sp"
+			android:layout_weight="0.4" />
+	</LinearLayout>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<!-- Define continue button -->
+		<ImageButton android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/imgbtn_continueorder"
+			android:layout_alignParentBottom="true" android:background="#00000000"
+			android:src="@drawable/btn_continueorder_before"
+			android:layout_marginLeft="10dip" />
+		<!-- Define all the order body -->
+		<ScrollView android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_above="@id/imgbtn_continueorder">
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:orientation="vertical"
+				android:paddingLeft="20dip" android:paddingRight="20dip"
+				android:id="@+id/linear_orderrow_layout">
+				<!-- Define unsubmit order list -->
+				<ImageView android:layout_width="wrap_content"
+					android:layout_marginTop="10dip" android:layout_height="wrap_content"
+					android:src="@drawable/unsubmit_order" />
+				<LinearLayout android:layout_width="fill_parent"
+					android:orientation="vertical" android:layout_height="wrap_content"
+					android:id="@+id/linear_orderrow_unsubmit_layout" />
+
+				<!-- Define submitted order list -->
+				<ImageView android:layout_width="wrap_content"
+					android:layout_marginTop="15dip" android:layout_height="wrap_content"
+					android:src="@drawable/submitted_order" />
+				<LinearLayout android:layout_width="fill_parent"
+					android:orientation="vertical" android:layout_height="wrap_content"
+					android:id="@+id/linear_orderrow_submit_layout" />
+			</LinearLayout>
+		</ScrollView>
+	</RelativeLayout>
+</LinearLayout>

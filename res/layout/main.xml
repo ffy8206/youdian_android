@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+	</RelativeLayout>
+	<FrameLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:panel="http://schemas.android.com/apk/res/com.outsourcing.industry.restaurant">
+			<com.outsourcing.industry.restaurant.component.TogglePanel
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:id="@+id/panel_neworder" android:paddingBottom="4dip"
+				panel:handle="@+id/panelhandle" panel:content="@+id/panelcontent"
+				panel:position="top" panel:animationDuration="1000"
+				panel:linearFlying="true" panel:openedHandle="@drawable/speaker"
+				panel:closedHandle="@drawable/speaker" android:gravity="center_horizontal">
+				<Button android:id="@id/panelhandle" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:gravity="center"/>
+				<LinearLayout android:id="@+id/panelcontent"
+					android:orientation="vertical" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:gravity="center" android:background="#323299">
+					<TextView android:layout_width="fill_parent"
+						android:layout_height="fill_parent" android:gravity="center"
+						android:text="@string/label_newoder_pass"  android:textSize="20sp"
+						android:padding="4dip" android:textColor="#eee" android:textStyle="bold"
+						android:background="#323299" />
+					<EditText android:layout_width="300dip"
+						android:layout_height="wrap_content"
+						android:id="@+id/edit_passtoorder" android:hint="@string/hint_loginpass"/>
+					<Button android:layout_width="100dip" android:id="@+id/button_confirm"
+						android:layout_height="wrap_content" android:text="@string/label_confirm"/>
+				</LinearLayout>
+			</com.outsourcing.industry.restaurant.component.TogglePanel>
+			<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+			/>
+	</FrameLayout>
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="asdadasdadadasdasdadasd" />
+</LinearLayout>

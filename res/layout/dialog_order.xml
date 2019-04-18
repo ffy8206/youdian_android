@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:orientation="vertical" android:background="@drawable/neworder_bg"
+	android:gravity="center_horizontal">
+	<!-- Define top button line -->
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity="center_horizontal" android:layout_marginTop="35dip">
+		<ImageButton android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/current_order_after"
+			android:id="@+id/imgbtn_currentorder" android:background="#00000000" />
+		<ImageButton android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/history_order_before"
+			android:id="@+id/imgbtn_historyorder" android:background="#00000000" />
+	</LinearLayout>
+	<RelativeLayout android:layout_width="wrap_content"
+		android:layout_height="fill_parent" android:gravity="center_horizontal">
+		<!-- Define continue button -->
+		<ImageButton android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/imgbtn_continueorder"
+			android:layout_alignParentBottom="true" android:background="#00000000"
+			android:src="@drawable/btn_continueorder_before"/>
+		<!-- Define no current order message -->
+		<TextView android:text="@string/error_noorder"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"
+			android:visibility="gone" android:id="@+id/text_noorder"
+			android:gravity="center" android:textSize="20sp"
+			android:layout_above="@id/imgbtn_continueorder" android:layout_marginLeft="180dip"/>	
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:id="@+id/linear_orderbody"
+			android:orientation="vertical" android:gravity="center_horizontal"
+			android:layout_above="@id/imgbtn_continueorder"
+			android:layout_centerHorizontal="true">
+			<!-- Define order information, order time, waiter info -->
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:layout_marginTop="10dip"
+				android:layout_marginLeft="15dip" android:layout_marginRight="15dip">
+				<!-- Define order information -->
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:orientation="horizontal"
+					android:layout_alignParentLeft="true">
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/label_order_info"
+						android:textSize="18sp" android:textColor="#000000" />
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/label_table_info"
+						android:id="@+id/text_tableinfo" android:textSize="18sp"
+						android:textColor="#000000" />
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/label_customer_info"
+						android:id="@+id/text_customerinfo" android:textSize="18sp"
+						android:textColor="#000000" />
+				</LinearLayout>
+				<!-- Define order time  -->
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:orientation="horizontal"
+					android:layout_centerHorizontal="true">
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/label_order_time"
+						android:textSize="18sp" android:textColor="#000000" />
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/text_order_time"
+						android:textSize="18sp" android:textColor="#000000" />
+				</LinearLayout>
+				<!-- Define waiter info -->
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:orientation="horizontal"
+					android:layout_alignParentRight="true">
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="@string/label_waiter_info"
+						android:textSize="18sp" android:textColor="#000000" />
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/text_waiter_info"
+						android:textSize="18sp" android:textColor="#000000" />
+				</LinearLayout>
+			</RelativeLayout>
+			<!-- Define seperate line -->
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:background="@drawable/line"
+				android:gravity="center_horizontal" android:layout_marginTop="10dip"
+				android:layout_marginBottom="10dip" />
+			<!-- Define price line -->
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:layout_marginLeft="20dip"
+				android:layout_marginRight="20dip">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/text_totaldishesnum"
+					android:layout_alignParentLeft="true" android:textSize="20sp"
+					android:layout_centerVertical="true" android:text="@string/label_total_dishnum"
+					android:textColor="#000000" />
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/text_totalprice"
+					android:layout_centerInParent="true" android:textSize="20sp"
+					android:text="@string/label_total_price" android:textColor="#000000" />
+				<ImageButton android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/imgbtn_finishorder"
+					android:layout_alignParentRight="true" android:background="@drawable/order_done_before" />
+			</RelativeLayout>
+			<!-- Define seperate line -->
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:background="@drawable/line"
+				android:gravity="center_horizontal" android:layout_marginTop="10dip"
+				android:layout_marginBottom="3dip" />
+			<!-- Define column name row -->
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:orientation="horizontal"
+				android:background="@drawable/order_titlecolum_bg">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="@string/label_name"
+					android:layout_weight="0.35" android:paddingLeft="10dip"
+					android:textSize="18sp" android:textColor="#FFFFFF" />
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="@string/label_quatity"
+					android:layout_weight="0.3" android:textSize="18sp"
+					android:textColor="#FFFFFF" />
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="@string/label_price"
+					android:layout_weight="0.35" android:textSize="18sp"
+					android:textColor="#FFFFFF" />
+			</LinearLayout>
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+				<!-- Define ordered dish table: cold, hot, other -->
+				<ScrollView android:layout_width="fill_parent"
+					android:layout_height="fill_parent">
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="fill_parent" android:orientation="vertical"
+						android:paddingLeft="20dip" android:paddingRight="20dip"
+						android:id="@+id/linear_dishrow_layout">
+						<!-- Define ordered dish table: cold -->
+						<LinearLayout android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal" android:layout_marginTop="10dip">
+							<ImageView android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:src="@drawable/order_dish_cold" />
+							<ImageButton android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:src="@drawable/collapse"
+								android:layout_marginLeft="20dip" android:id="@+id/imgbtn_cold_behave"
+								android:background="#00000000" />
+						</LinearLayout>
+						<LinearLayout android:layout_width="fill_parent"
+							android:layout_height="wrap_content" android:id="@+id/linear_cold"
+							android:orientation="vertical" android:layout_marginTop="10dip"/>
+
+						<!-- Define ordered dish table: hot -->
+						<LinearLayout android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal" android:layout_marginTop="15dip">
+							<ImageView android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:src="@drawable/order_dish_hot" />
+							<ImageButton android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:src="@drawable/collapse"
+								android:layout_marginLeft="20dip" android:id="@+id/imgbtn_hot_behave"
+								android:background="#00000000" />
+						</LinearLayout>
+						<LinearLayout android:layout_width="fill_parent"
+							android:layout_height="wrap_content" android:id="@+id/linear_hot"
+							android:orientation="vertical" android:layout_marginTop="10dip"/>
+
+						<!-- Define ordered dish table: other -->
+						<LinearLayout android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal" android:layout_marginTop="15dip">
+							<ImageView android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:src="@drawable/order_dish_other" />
+							<ImageButton android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:src="@drawable/collapse"
+								android:layout_marginLeft="20dip" android:id="@+id/imgbtn_other_behave"
+								android:background="#00000000" />
+						</LinearLayout>
+						<LinearLayout android:layout_width="fill_parent"
+							android:layout_height="wrap_content" android:id="@+id/linear_other"
+							android:orientation="vertical" android:layout_marginTop="10dip"/>
+					</LinearLayout>
+				</ScrollView>
+
+			</RelativeLayout>
+		</LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

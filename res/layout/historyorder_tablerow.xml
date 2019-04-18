@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:orientation="horizontal"
+  android:layout_marginTop="80dip" android:layout_marginBottom="80dip" android:layout_marginLeft="3dip">
+  <TextView android:layout_width="100dip"
+  android:layout_height="wrap_content" android:id="@+id/text_tableno"
+  android:textColor="#000000" android:textSize="20sp" android:layout_weight="0.2"/>
+  <TextView android:layout_width="100dip"
+  android:layout_height="wrap_content" android:id="@+id/text_customerno"
+  android:textColor="#000000" android:textSize="20sp" android:layout_weight="0.2"/>
+  <TextView android:layout_width="120dip"
+  android:layout_height="wrap_content" android:id="@+id/text_dishestotalnum"
+  android:textColor="#000000" android:textSize="20sp" android:layout_weight="0.2"/>
+  <TextView android:layout_width="100dip"
+  android:layout_height="wrap_content" android:id="@+id/text_totalprice"
+  android:textColor="#000000" android:textSize="20sp" android:layout_weight="0.2"/>
+  <ImageButton android:layout_width="wrap_content"
+  android:layout_height="wrap_content" android:id="@+id/imgbtn_operation"
+  android:background="#00000000" android:src="@drawable/order_smallimgbtn_continue"
+  android:layout_weight="0.2"/>
+</LinearLayout>

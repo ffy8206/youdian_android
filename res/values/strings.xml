@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">RestaurantAndroid</string>
+    <string name="label_quit">退出</string>
+    <string name="label_passtoquit">请输入密码退出</string>
+    <string name="label_confirm">确 定</string>
+    <string name="label_cancel">取消</string>
+    <string name="label_login">登陆</string>
+    <string name="label_loginname_empty">用户名不能为空</string>
+    <string name="label_loginpass_empty">密码不能为空</string>
+    <string name="label_login_fail">用户名或密码错误</string>
+    <string name="label_newoder_pass">当前未有菜单\n请输入密码创建新菜单</string>
+    <string name="label_existorder_pass">已有菜单未提交\n开始新菜单会丢失已有菜单</string>
+    <string name="label_order_info">菜单信息：</string>
+    <string name="label_neworder_info">开台信息</string>
+    <string name="label_neworder_time">订单时间：%s</string>
+    <string name="label_formatted_timestr">M月dd日 HH:mm</string>
+    <string name="label_table_info"> %d号台  </string>
+    <string name="label_customer_info"> %d位顾客</string>
+    <string name="label_order_time">点单时间：</string>
+    <string name="label_waiter_info">服务员：</string>
+    <string name="label_name">名称</string>
+    <string name="label_quatity">数量</string>
+    <string name="label_price">单价</string>
+    <string name="label_price2">价格</string>
+    <string name="label_total_dishnum">总菜品：%d</string>
+    <string name="label_total_dishnum2">菜品数量</string>
+    <string name="label_total_price">总金额：%.2f 元</string>
+    <string name="label_order_status">点菜单状态</string>
+    <string name="label_historyorder_tableno">%d 号台</string>
+    <string name="label_postion">位置</string>
+    <string name="label_customerno">人数</string>
+    <string name="label_tableno">台号</string>
+    <string name="label_waiterno">服务编号</string>
+    <string name="label_notes">备注</string>
+    <string name="label_total_ordereddishnum">菜品总数</string>
+    <string name="label_total_orderedprice">金额 /元</string>
+    <string name="label_tag_submitted">已提交</string>
+    <string name="label_tag_unsubmit">未提交</string>
+    <string name="label_tag_submitall">全部</string>
+    <string name="label_suit_custtype">适合人群</string>
+    <string name="label_suit_custno">适合人数</string>
+    
+    <string name="label_neworder">开台</string>
+    <string name="label_neworder_2">重新开台</string>
+    <string name="label_currentorder_briefinfo">当前： %1$d 号 - %2$d 道菜 - %3$.2f 元</string>
+    <string name="label_exampleorder">参考点单</string>
+    
+    <string name="hint_phoneno1">请输入手机号码一</string>
+    <string name="hint_phoneno2">请输入手机号码二</string>
+    <string name="hint_phoneno3">请输入手机号码三</string>
+    <string name="hint_phoneno4">请输入手机号码四</string>
+    <string name="hint_loginname">请输入用户名</string>
+    <string name="hint_loginpass">请输入密码</string>
+    <string name="error_noorder">没有正在处理的点菜单\n请先开台或选择历史点菜单</string>
+    <string-array name="strarr_position">
+        <item>大堂</item>
+        <item>包间</item>
+        <item>其他</item>
+    </string-array>
+    <string name="setting_title">功能设置</string>
+    <string name="setting_announce_key">announce</string>
+    <string name="setting_announce_title">公告</string>
+    <string name="setting_announce_summary">请设置显示的公告</string>
+    
+</resources>
